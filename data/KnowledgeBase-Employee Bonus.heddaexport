@@ -1,0 +1,279 @@
+{
+  "HeddaIoTransportVersion": 1,
+  "KnowledgeBases": [
+    {
+      "Name": "Employee Bonus",
+      "Description": "\u003Cp\u003EKnowledge base for employee bonus table\u003C/p\u003E",
+      "DataResponsibilityOffice": null,
+      "Category": null,
+      "Id": "8dab426a-ccc7-4a68-a938-c629c370cee0",
+      "ProjectId": "00000000-0000-0000-0000-f5936bf58ac8",
+      "Domains": [
+        {
+          "Name": "Bonus",
+          "Description": null,
+          "DataType": 2,
+          "Length": 2,
+          "Precision": 3,
+          "IsReadOnly": true,
+          "IsKeyColumn": false,
+          "Algorithm": null,
+          "Id": "5ada428a-033b-472a-af6c-1b6cb92a65ed",
+          "Members": []
+        },
+        {
+          "Name": "Salary",
+          "Description": null,
+          "DataType": 2,
+          "Length": 2,
+          "Precision": 8,
+          "IsReadOnly": true,
+          "IsKeyColumn": false,
+          "Algorithm": null,
+          "Id": "25d568d5-fd72-466f-93d3-45c0e864e75e",
+          "Members": []
+        },
+        {
+          "Name": "Exit Date",
+          "Description": null,
+          "DataType": 1,
+          "Length": 10,
+          "Precision": null,
+          "IsReadOnly": true,
+          "IsKeyColumn": false,
+          "Algorithm": 2,
+          "Id": "36622f97-ae2d-4959-b312-e6ea562b961e",
+          "Members": []
+        },
+        {
+          "Name": "Employee_ID",
+          "Description": null,
+          "DataType": 1,
+          "Length": 10,
+          "Precision": null,
+          "IsReadOnly": true,
+          "IsKeyColumn": true,
+          "Algorithm": 2,
+          "Id": "7b9f9680-7cf1-4934-b859-fab12d6be7bb",
+          "Members": []
+        }
+      ],
+      "Rulebooks": [
+        {
+          "Id": "7d6b3cef-c388-4712-af9e-f1dd2c46aec0",
+          "Name": "Bonus RuleBook",
+          "Description": null,
+          "Position": 0,
+          "KnowledgeBaseId": "8dab426a-ccc7-4a68-a938-c629c370cee0",
+          "ProjectId": "00000000-0000-0000-0000-f5936bf58ac8",
+          "RootBusinessRuleId": "7545958e-1d9f-44ce-bc73-2c59238939ff",
+          "InEditRef": "089b96f6-4892-42fa-a05b-e2a9982e15d4",
+          "CreatedBy": "12386165-a4e4-4627-9432-d1e29f180070",
+          "CreatedOn": "2023-09-04T12:16:20.52Z",
+          "ModifiedBy": "12386165-a4e4-4627-9432-d1e29f180070",
+          "ModifiedOn": "2023-09-04T12:16:20.5433333Z",
+          "BusinessRules": []
+        }
+      ],
+      "BusinessRules": [
+        {
+          "Id": "7545958e-1d9f-44ce-bc73-2c59238939ff",
+          "KnowledgeBaseId": "8dab426a-ccc7-4a68-a938-c629c370cee0",
+          "ProjectId": "00000000-0000-0000-0000-f5936bf58ac8",
+          "Name": "Current_Employees",
+          "Description": null,
+          "DQDimensionId": 1,
+          "Condition": {
+            "Key": "5f73e588-5116-44e3-a04a-eef8af87f2eb",
+            "Domain": null,
+            "Operator": {
+              "Key": "and",
+              "Name": "And",
+              "IsValue": false
+            },
+            "ValueSource": 0,
+            "Value": null,
+            "Index": 0,
+            "Level": 0,
+            "Conditions": [
+              {
+                "Key": "c010536c-7d36-4a35-86d5-300a73fd8e98",
+                "Domain": {
+                  "Id": "36622f97-ae2d-4959-b312-e6ea562b961e",
+                  "Name": "Exit Date",
+                  "InEditRef": "e1a533b4-2e66-4e30-ac86-2568f999d8d4",
+                  "DataType": 4
+                },
+                "Operator": {
+                  "Key": "null",
+                  "Name": null,
+                  "IsValue": false
+                },
+                "ValueSource": 0,
+                "Value": "",
+                "Index": 0,
+                "Level": 0,
+                "Conditions": []
+              }
+            ]
+          },
+          "Actions": [],
+          "IsDataflowRule": false,
+          "RulebookId": "7d6b3cef-c388-4712-af9e-f1dd2c46aec0",
+          "Rulebook": null,
+          "ValidSuccessor": "6702e92a-04e3-41cd-9ce0-d4573eb8adf2",
+          "ValidSuccessorInEditRef": "0fb64ac3-6843-4242-8c2d-7549d17a2c0e",
+          "InvalidSuccessor": null,
+          "InvalidSuccessorInEditRef": null,
+          "InEditRef": "7c8c5242-d56e-463b-98fe-eb1d1eac47e1",
+          "CreatedBy": "12386165-a4e4-4627-9432-d1e29f180070",
+          "CreatedOn": "2023-09-04T12:16:20.53Z",
+          "ModifiedBy": "12386165-a4e4-4627-9432-d1e29f180070",
+          "ModifiedOn": "2023-09-06T12:17:00.24Z"
+        },
+        {
+          "Id": "42867c88-4a6f-4c54-9d7a-acebbbda1193",
+          "KnowledgeBaseId": "8dab426a-ccc7-4a68-a938-c629c370cee0",
+          "ProjectId": "00000000-0000-0000-0000-f5936bf58ac8",
+          "Name": "Salary_Nulls",
+          "Description": null,
+          "DQDimensionId": 1,
+          "Condition": {
+            "Key": "142e5927-b064-4122-a998-d9d3d0bed4fd",
+            "Domain": null,
+            "Operator": {
+              "Key": "and",
+              "Name": "And",
+              "IsValue": false
+            },
+            "ValueSource": 0,
+            "Value": "",
+            "Index": 0,
+            "Level": 0,
+            "Conditions": [
+              {
+                "Key": "3f59150b-5d40-483c-be41-3426db5bb3bb",
+                "Domain": {
+                  "Id": "25d568d5-fd72-466f-93d3-45c0e864e75e",
+                  "Name": "Salary",
+                  "InEditRef": "7b099296-e2c5-488a-a0d0-676043a919cd",
+                  "DataType": 2
+                },
+                "Operator": {
+                  "Key": "null",
+                  "Name": null,
+                  "IsValue": false
+                },
+                "ValueSource": 0,
+                "Value": "",
+                "Index": 0,
+                "Level": 0,
+                "Conditions": []
+              },
+              {
+                "Key": "2c0e2fb2-bbeb-4648-9f80-dc51871ca407",
+                "Domain": {
+                  "Id": "7b9f9680-7cf1-4934-b859-fab12d6be7bb",
+                  "Name": "Employee_ID",
+                  "InEditRef": "1c9b945f-2e2b-4e63-8c26-3ad24f0a45d9",
+                  "DataType": 1
+                },
+                "Operator": {
+                  "Key": "eq",
+                  "Name": null,
+                  "IsValue": false
+                },
+                "ValueSource": 0,
+                "Value": "@Lookup(Salary_Lookup,Employee_ID)",
+                "Index": 0,
+                "Level": 0,
+                "Conditions": []
+              }
+            ]
+          },
+          "Actions": [
+            {
+              "Key": "ebd69c19-cba5-4b72-abfa-6a965be95b60",
+              "Domain": {
+                "Id": "25d568d5-fd72-466f-93d3-45c0e864e75e",
+                "Name": "Salary",
+                "InEditRef": null,
+                "DataType": 2
+              },
+              "ActionType": "set",
+              "Value": "@Lookup(Salary_Lookup,Annual_Salary)"
+            }
+          ],
+          "IsDataflowRule": true,
+          "RulebookId": "7d6b3cef-c388-4712-af9e-f1dd2c46aec0",
+          "Rulebook": null,
+          "ValidSuccessor": null,
+          "ValidSuccessorInEditRef": null,
+          "InvalidSuccessor": null,
+          "InvalidSuccessorInEditRef": null,
+          "InEditRef": "ac4c9a09-77bd-41eb-8a3b-87a09977eac4",
+          "CreatedBy": "12386165-a4e4-4627-9432-d1e29f180070",
+          "CreatedOn": "2023-09-04T12:38:59.1866667Z",
+          "ModifiedBy": "12386165-a4e4-4627-9432-d1e29f180070",
+          "ModifiedOn": "2023-09-06T12:17:00.24Z"
+        },
+        {
+          "Id": "6702e92a-04e3-41cd-9ce0-d4573eb8adf2",
+          "KnowledgeBaseId": "8dab426a-ccc7-4a68-a938-c629c370cee0",
+          "ProjectId": "00000000-0000-0000-0000-f5936bf58ac8",
+          "Name": "Eligible_Employees_For_Bonus",
+          "Description": null,
+          "DQDimensionId": 1,
+          "Condition": {
+            "Key": "ce844067-6e47-412f-addb-527d2f1095a6",
+            "Domain": null,
+            "Operator": {
+              "Key": "and",
+              "Name": "And",
+              "IsValue": false
+            },
+            "ValueSource": 0,
+            "Value": "",
+            "Index": 0,
+            "Level": 0,
+            "Conditions": [
+              {
+                "Key": "b6d63aa6-0db3-4408-8a24-ea48fc78e153",
+                "Domain": {
+                  "Id": "5ada428a-033b-472a-af6c-1b6cb92a65ed",
+                  "Name": "Bonus",
+                  "InEditRef": "8fddcaee-a30c-4aeb-ba64-bed5bf660eea",
+                  "DataType": 2
+                },
+                "Operator": {
+                  "Key": "gt",
+                  "Name": null,
+                  "IsValue": false
+                },
+                "ValueSource": 0,
+                "Value": "0",
+                "Index": 0,
+                "Level": 0,
+                "Conditions": []
+              }
+            ]
+          },
+          "Actions": [],
+          "IsDataflowRule": false,
+          "RulebookId": "7d6b3cef-c388-4712-af9e-f1dd2c46aec0",
+          "Rulebook": null,
+          "ValidSuccessor": "42867c88-4a6f-4c54-9d7a-acebbbda1193",
+          "ValidSuccessorInEditRef": "ac4c9a09-77bd-41eb-8a3b-87a09977eac4",
+          "InvalidSuccessor": null,
+          "InvalidSuccessorInEditRef": null,
+          "InEditRef": "0fb64ac3-6843-4242-8c2d-7549d17a2c0e",
+          "CreatedBy": "12386165-a4e4-4627-9432-d1e29f180070",
+          "CreatedOn": "2023-09-04T12:22:08.2166667Z",
+          "ModifiedBy": "12386165-a4e4-4627-9432-d1e29f180070",
+          "ModifiedOn": "2023-09-06T12:17:00.2533333Z"
+        }
+      ],
+      "DatasetRules": []
+    }
+  ]
+}
